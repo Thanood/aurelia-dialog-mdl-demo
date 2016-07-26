@@ -1,0 +1,20 @@
+<template>
+  <ai-dialog class="mdl-dialog">
+    <ai-dialog-body>
+      <h2 class="mdl-dialog__title">Edit first name</h2>
+      <div class="mdl-dialog__content">
+          First name:
+          <input value.bind="person.firstName" /><br/>
+          Middle name:
+          <input value.bind="person.middleName" /><br/>
+          Last name:
+          <input value.bind="person.lastName" /><br/>
+      </div>
+    </ai-dialog-body>
+
+    <ai-dialog-footer class="mdl-dialog__actions">
+      <button class="mdl-button" click.trigger="controller.cancel()">Cancel</button>
+      <button class="mdl-button" click.trigger="controller.ok(person)">Ok</button>
+    </ai-dialog-footer>
+  </ai-dialog>
+</template>
